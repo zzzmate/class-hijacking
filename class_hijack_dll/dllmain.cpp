@@ -7,10 +7,10 @@ struct vec3 {
     vec3() : x(0.0f), y(0.0f), z(0.0f) {}
     vec3(float _x, float _y, float _z) : x(_x), y(_y), z(_z) {}
 };
-typedef void(__thiscall* classBaseT)(void* pThis, int _health, int _armor, const char* _name, vec3 _position);
+typedef void(__thiscall* classBaseT)(void* pThis, int _health, int _armor, const char* _name, vec3 _position); // the whole class
 classBaseT classBaseHk;
 
-typedef void(__thiscall* funcBaseT)(void* pThis);
+typedef void(__thiscall* funcBaseT)(void* pThis); // inside of the class the print function (PrintPlayer)
 funcBaseT funcBaseHk;
 
 class newPlayer { // remade class
